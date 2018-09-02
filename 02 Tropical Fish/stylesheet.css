@@ -4,8 +4,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     /* Cancel out some differences between browser defaults */
     margin: 0;
     padding: 0;
-    /* border: 0; */
-    border: 1px solid black;
+    border: 0;
+    /* border: 1px solid black; */
 }
 
 * {
@@ -20,9 +20,9 @@ img {
 
 body {
   display: grid;
-  grid-template-columns: 30% 50% 20%;
+  grid-template-columns: 25% 50% 25%;
 
-  width: 65%;
+  width: 80%;
   margin: auto;
 }
 
@@ -33,19 +33,90 @@ header {
   align-items: center;
 }
 
-h1 {
-  flex-grow: 3;
-  margin-left: 15px;
+header h1 {
+  flex-grow: 1;
+  padding-left: 1em;
 }
 
 #logo {
-  width: 25%;
+  width: 30%;
 }
 
-nav {
-
+nav ul {
+  margin: 20px;
 }
 
+nav li {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+content {
+  margin: 20px 15px auto 15px;
+  line-height: 1.5rem;
+}
+
+#mixedFemale {
+  width: auto;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+#compareFish {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#maleSwordtail {
+  text-align: center;
+  width: 50%;
+  margin: 2px 5px 3px 2px;
+}
+
+#femaleSwordtail {
+  text-align: center;
+  width: 50%;
+  margin: 2px 2px 2px 5px;
+}
+
+#asidePart {
+  margin: 20px;
+}
+
+#guppies {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#angelfish {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li {
+  margin-right: 2em;
+}
+
+#rightPart {
+  align-items: flex-start;
+}
 
 
 
@@ -67,6 +138,7 @@ nav {
 /* font */
 body {
   font-family: Verdana, Arial, sans-serif;
+  line-height: 1.5rem;
 }
 
 nav, main, aside {
@@ -78,6 +150,40 @@ nav, main, aside {
 }
 
 header, footer {
-  color: #113A0E;
-  background-color: #006600;
+  background-color: #113A0E;
+}
+
+header > h1, footer {
+  color: white;
+}
+
+nav, aside {
+  background-color: #00cc99;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+main, nav, aside, footer {
+    padding: 2em;
 }
