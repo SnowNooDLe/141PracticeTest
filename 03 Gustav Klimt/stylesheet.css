@@ -5,10 +5,135 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     margin: 0;
     padding: 0;
     border: 0;
+    /* border: 1px solid black; */
 }
- 
+
 * {
     /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
     box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
+/* layout */
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > h1 {
+  flex-grow: 1;
+  margin-left: 1em;
+}
+header > img {
+  width: 20%;
+  padding: 10px;
+}
+
+nav {
+  grid-column: 1;
+}
+nav ul {
+  margin: 2em;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+main {
+  grid-column: 2;
+  padding: 1.5em;
+}
+#photos {
+  display: flex;
+}
+
+#photos li {
+  margin: 0 0.25em;
+}
+
+main > h1 {
+  text-align: center;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+aside {
+  grid-column: 3;
+  padding: 1.5em;
+  text-align: center;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+
+
+
+
+/* style */
+nav li, #photos >li, footer li {
+  list-style: none;
+}
+
+/* requirement */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #444444;
+  line-height: 1.5em;
+}
+
+header {
+  background-color: #d4af37;
+}
+
+nav {
+  background-color: grey;
+}
+nav a {
+  color: #adb3ad;
+}
+
+footer{
+  background-color: #666666;
+  color: white;
+}
+
+aside {
+  background-color: #dedede;
+}
+
+a:hover{
+  color: #ffff00;
+}
+
+main a:hover {
+  color: #ff0000;
+}
+
+.selected {
+  color: #ffff00;
+}
+h1, h2, h3, h4, li {
+  font-family: 'Century Gothic', Tahoma, sans-serif;
+}
