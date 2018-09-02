@@ -4,11 +4,80 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     /* Cancel out some differences between browser defaults */
     margin: 0;
     padding: 0;
-    border: 0;
+    /* border: 0; */
+    border: 1px solid black;
 }
- 
+
 * {
     /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
     box-sizing: border-box;
 }
 
+img {
+    /* This is useful - an image will fill its containing box */
+    width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+
+  width: 65%;
+  margin: auto;
+}
+
+header {
+  grid-column: 1 / 4;
+
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  flex-grow: 3;
+  margin-left: 15px;
+}
+
+#logo {
+  width: 25%;
+}
+
+nav {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* font */
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+nav, main, aside {
+  color: #444444;
+}
+
+.selected {
+  color: #ffff00;
+}
+
+header, footer {
+  color: #113A0E;
+  background-color: #006600;
+}
