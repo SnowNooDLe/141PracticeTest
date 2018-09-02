@@ -1,0 +1,124 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*border: 1px solid black;*/
+}
+
+* {
+    /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+body {
+  width: 60%;
+  margin: auto;
+
+  /* setting the column of body as two columns, */
+  display: grid;
+  grid-template-columns: 20rem 40rem;
+}
+
+header {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav {
+  grid-column: 1 / 3;
+  padding: 0.5em 0;
+}
+
+nav ul, footer ul {
+  display: flex;
+}
+
+ul  li {
+  padding: 0 1em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+aside {
+  grid-column: 1;
+}
+content {
+  grid-column: 2;
+  padding: 2em 0 2em 2em;
+}
+
+footer {
+  grid-column: 1 / 3;
+}
+
+
+#DavidGilmourConcert {
+  width: 20rem;
+}
+
+#DavidGilmour {
+  width: 20rem;
+}
+
+#album {
+  width: 60%;
+  margin: 0 auto 3em auto;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.caption {
+    text-align: center;
+}
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header {
+    background-color: #3e3e3e;
+    color: #ffffff;
+}
+
+aside {
+    color: #ffffff;
+    background-color: #444444;
+}
+
+nav {
+    background-color: #222222;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+footer {
+    background-color: #cccccc;
+}
+
+footer a {
+    color: #333333;
+}
+
+.selected {
+    color: #ffff00;
+}
+
+a:hover {
+    color: #ff0000;
+}
