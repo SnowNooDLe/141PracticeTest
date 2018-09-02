@@ -5,10 +5,149 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     margin: 0;
     padding: 0;
     border: 0;
+    /* border: 1px solid black; */
 }
- 
+
 * {
     /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
     box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
+/* grid */
+body {
+  display: grid;
+
+  grid-template-columns: 20rem 36rem 20rem;
+
+  width: 76rem;
+  margin: auto;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+nav {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 2em;
+}
+
+main {
+  /* grid-column: 2; */
+  grid-row: 1 / 3;
+  padding: 2em;
+}
+
+aside {
+  /* grid-column: 3; */
+  grid-row: 1 / 3;
+  padding-top: 2em;
+}
+
+footer {
+    grid-column: 1 / 4;
+    padding: 2em;
+}
+
+/* flex */
+
+footer > div {
+  display: flex;
+  margin-bottom: : 2em;
+  justify-content: space-around;
+}
+
+.footerFish{
+  flex-basis: 20%;
+}
+
+footer ul {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+footer li{
+  padding: 0 1em;
+}
+
+footer p {
+  text-align: center;
+}
+
+.fishInPhoto {
+  float: right;
+  width: 10rem;
+  margin: 0 0 1em 1em;
+}
+
+header > p {
+  text-align: center;
+  margin: 1em 0;
+  font-size: 1.5em;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+main h1{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+/* requirement */
+body {
+  font-family: "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5em;
+  color: #444444;
+}
+
+header {
+  background-color: #54894d;
+}
+
+nav {
+  background-color: #f3f3f3;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+h1, h2, h3 {
+  color: #2B6627;
+}
+
+li {
+  list-style: none;
+}
+a {
+  color:  #444444;
+  text-decoration: none;
+}
+
+h2 {
+    border-bottom: 2px solid #2B6627;
+}
+
+header p {
+  color: white;
+}
+
+.selected {
+  color: #ff0000;
+  text-decoration: underline;
+}
