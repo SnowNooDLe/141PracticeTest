@@ -1,0 +1,226 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* LAYOUT */
+
+/* Main page layout grid */
+
+body {
+    display: grid;
+    
+    /* Two fixed-width central columns, with flexible space on either side. */
+    grid-template-columns: 1fr 20rem 40rem 1fr;
+}
+
+header, nav, footer {
+    grid-column: 1 / 5;
+}
+
+main {
+    grid-column: 3;
+    grid-row: 3;
+    padding: 2em 0;
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Flexboxes */
+
+/* Header ---------------
+The main technique to learn from this example is how to use a full-width grid
+row like the header as a flexbox too. Note that we can't place the header
+image and text in the body grid, even though they look like they are in grid
+columns. That's because the header image and paragraph are not grid items - 
+they are not immediate children of the body grid (the header element is). A grid
+doesn't "pass through" to descendant elements that aren't children. In this case
+we create a header flexbox and then the flexbox items can be centred in the grid
+row - they don't start at the far left of the window (grid row). To achieve this,
+give the flexbox items in the header widths and justification. */
+
+header {
+    display: flex;
+    
+    /* Horizontally centre the two flex items. */
+    justify-content: center;
+    
+    /* Vertically centre the two flex items - note the vertical alignment of 
+       the paragraph text. */
+    align-items: center;
+}
+
+header img {
+    width: 5rem;
+}
+
+header p {
+    /* The width of the p is the width of the two grid columns (main plus aside) less
+       the width of the header image: 20rem + 40rem - 5 rem = 55rem. Then when we 
+       align the text to the right it will line up with the right side of the
+       main element (fourth grid column line). */      
+    flex-basis: 55rem;
+    text-align: right;
+}
+
+/* Nav -------------------
+The nav elements also start with the left edge lined up with the left edge of
+the aside (on the second grid column line). So, we need to centre the nav ul in 
+the nav. In this case we just have one box we want to centre (the ul), so we can
+give it a width and auto left and right margins. The width of the box is the sum
+of the aside and main column widths: 20rem + 40rem = 60rem. */
+
+nav ul {
+    display: flex;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+nav li {
+    /* Push the list items apart horizontally. */
+    margin-right: 2em;
+}
+
+/* Footer ----------------
+The footer is much easier to deal with because the items are centred in the whole
+grid row (= window width). So, we need a flexbox for the ul (which will be the 
+whole width of the grid row (footer) by default. Then we justify the flex items
+so that they are centred. */
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    /* Push the list items apart horizontally. We need equal left and right
+       margins to keep the centering of the list items. */
+    margin: 0 1em;
+}
+
+/* White space */
+
+nav {
+    padding: 0.5em;
+}
+
+aside {
+    /* Padding all around except for the left - the left needs to line up on
+       the grid column line. */
+    padding: 2em 2em 2em 0;
+}
+
+aside div {
+    margin-bottom: 1.5em;
+    padding: 2em;
+}
+
+footer {
+    padding: 2em 0;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+header p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+aside {
+    text-align: center;
+}
+
+aside p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.instrument-name {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+aside > div {
+    background-color: #e0e0e0;
+    border: 1px solid #888888;
+    border-radius: 0.5em;
+}
+
+nav, footer {
+    background-color: #444444;
+}
+
+nav a, footer a {
+    color: #ffffff;
+}
+
+.selected, a:hover {
+    color: #ff0000;
+}
+
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+
+

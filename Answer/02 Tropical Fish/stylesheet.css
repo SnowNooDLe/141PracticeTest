@@ -1,0 +1,204 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+
+/* LAYOUT */
+
+/* Main Grid */
+
+body {
+    /* Create a centred fixed-width box. */
+    width: 80rem;
+    margin: 0 auto;
+    
+    /* The body contains the main page elements in a three-column grid. The column
+       widths are 1/4, 1/2, and 1/4 of the available width (parent box), so 
+       we use the fr unit. Rows are automatically created as required. */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+header, footer {
+    grid-column: 1 / 4;
+}
+
+/* The other grid items are automatically put into the 
+   columns as follows, so we don't actually need to specify
+   these grid-columns:
+   
+nav {
+    grid-column: 1;
+}
+
+main {
+    grid-column: 2;
+}
+
+aside {
+    grid-column: 3;
+}
+*/
+
+/* Flexboxes */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    flex-grow: 1;
+    padding-left: 1em;
+}
+
+header img {
+    width: 30%;
+}
+
+#fish-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fish-images > div {
+    /* To get a bit of space between the images, set their parent
+       boxes (the divs) to be a bit less than half (50%) of the width
+       of the flexbox. */
+    flex-basis: 48%;
+}
+
+footer {
+    /* We need a flexbox to push the links to the left of the footer
+       and the copyright item to the right. */
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li {
+    margin-right: 2em;
+}
+
+main, nav, aside, footer {
+    padding: 2em;
+}
+
+aside > div {
+    margin-bottom: 2em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+nav a {
+    font-size: 1.5rem;
+}
+
+.caption {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.scientific-name {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header, footer {
+    background-color: #113a0e;
+    color: #ffffff;
+}
+
+nav, aside {
+	background-color: #c1d8be;
+}
+
+nav a {
+    color: #000000;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.selected, a:hover {
+    color: #ff0000;
+}
+
+
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5em 2em 0.5em 0;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES & VIDEOS */
+
+img {
+    width: 100%;
+}
+
+.lead-in {
+    width: auto;
+    float: left;
+    margin: 0 1em 1em 0;
+}

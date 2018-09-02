@@ -1,0 +1,148 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+
+/* LAYOUT */
+
+body {
+    /* This is a left-aligned, fixed-width layout, so just needs a width on the body. */
+    width: 86rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 2em;
+}
+
+header {
+    /* The whole left-hand column is the header of the page, so it spans all the rows. */
+    grid-row: 1 / 4;
+}
+
+nav {
+    padding: 1em 0;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between; 
+}
+
+main {    
+    /* We can set up another grid to lay out the items in the main element. It would also
+       be possible to do it with flexbox by setting "flex-wrap: wrap" to allow
+       the items to wrap onto the second line. */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+}
+
+footer {
+    padding: 2em 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin: 0 1em;
+}
+
+.film-details {
+    padding: 1em;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1, h2, nav a, footer a {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 4em 0.5em 0 0.5em;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+nav a {
+    font-size: 1.5rem;
+}
+
+.title {
+    font-style: italic;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #444444;
+}
+
+header {
+    background-color: #666666;
+    color: #ffffff;
+}
+
+nav a, footer a {
+    color: #444444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff9f40;
+}
+
+.active {
+    color: #ff7f00;
+}
+
+.film-details {
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
+}
+
+
+/* NAVIGATION */ 
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES */
+
+img {
+    width: 100%;
+}  
