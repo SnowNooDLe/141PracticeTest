@@ -103,6 +103,10 @@ main h1{
   font-size: 2em;
   margin-bottom: 1em;
 }
+
+aside h2{
+  margin-bottom: 1em;
+}
 /* requirement */
 body {
   font-family: "Lucida Sans", Arial, sans-serif;

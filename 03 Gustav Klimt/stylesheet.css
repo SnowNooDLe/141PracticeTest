@@ -92,7 +92,7 @@ footer > ul {
 
 
 /* style */
-nav li, #photos >li, footer li {
+nav li, #photos > li, footer li {
   list-style: none;
 }
 
@@ -110,15 +110,18 @@ header {
 nav {
   background-color: grey;
 }
-nav a {
-  color: #adb3ad;
+nav a , footer a{
+  color: white;
+  text-decoration: none;
 }
 
 footer{
   background-color: #666666;
-  color: white;
 }
 
+#photos {
+  margin-bottom: 1em;
+}
 aside {
   background-color: #dedede;
 }
@@ -136,4 +139,8 @@ main a:hover {
 }
 h1, h2, h3, h4, li {
   font-family: 'Century Gothic', Tahoma, sans-serif;
+}
+
+.currentPainting {
+  border-bottom: 0.1em solid #d4af37;
 }
